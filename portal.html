@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Government Portal Database &REG;</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="ui borderless attached menu">
+        <div class="ui container">
+            <div class="header item">
+                <img src="img/logo.png" alt="" class="ui tiny right spaced image">
+                <span class="ui red text">The <br> EUROPEAN <br> GOVERNMENT <br> PORTAL <br> DATABASE</span>
+            </div>
+
+            <div class="ui grid">
+                <div class="computer tablet only row">
+                    <div class="ui secondary menu">
+                        <div class="header item">Your account has been activated. This is your secure &nbsp; <span
+                                class="ui green thick text">ACCESS PORTAL DASHBOARD</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right menu">
+                <div class="ui item">
+                    <button class="ui large yellow button" id="sign-out-btn"><i
+                            class="red exclamation triangle icon"></i> Don't forget to sign out here !!!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui container">
+        <div class="ui stackable grid">
+            <div class="row">
+                <div class="sixteen wide column">
+                    <div class="ui basic padded segment">
+                        <div class="ui huge header">
+                            <span class="ui red text">
+                                Welcome Alberto De Angelis Curtis,
+                            </span>
+                            <div class="sub header">Please find below a summary of the actions you have taken to date.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui inverted icon message">
+                        <i class="yellow exclamation circle icon"></i>
+                        <div class="content">
+                            <div class="header">Access Restricted</div>
+                            <p>
+                                Due to the failure to pay your annual Boarding Pass fee of &euro; 9,652.63 Euro by the
+                                specified deadline, access to certain functions on your portal has been restricted.
+                                Please be advised that failure to remit the payment within the required timeframe may
+                                result in termination of your account.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="sixteen wide column">
+                    <div class="ui segment">
+                        <div class="ui small header">Payment History</div>
+
+                        <p><span class="ui grey text">Filter Payment Method by Tags</span></p>
+                        <a class="ui red tag label" id="credit-agricole-tag">#credit agricole bank</a>
+                        <a class="ui red tag label" id="moneygram-tag">#moneygram</a>
+                        <a class="ui red tag label" id="western-union-tag">#western union</a>
+                        <a class="ui red tag label" id="ing-direct-bank-tag">#ing direct bank</a>
+                        <a class="ui red tag label" id="show-all-payments-tag">#show all payments</a>
+
+                        <div class="ui buttons">
+                            <button class="ui positive button trx_btns">Deposit</button>
+                            <button class="ui yellow button trx_btns">Withdraw</button>
+                            <button class="ui primary button trx_btns">Transfer</button>
+                        </div>
+                    </div>
+
+                    <table class="ui single line fixed table">
+                        <thead>
+                            <tr>
+                                <th>type</th>
+                                <th>beneficiary</th>
+                                <th>credit bank account</th>
+                                <th>address</th>
+                                <th>country</th>
+                                <th>description</th>
+                                <th>amount</th>
+                                <th>currency</th>
+                                <th>debit bank account</th>
+                                <th>date of entry</th>
+                                <th>channel</th>
+                                <th>status</th>
+                                <th>receipt</th>
+                            </tr>
+                        </thead>
+                        <tbody id="payment-table-body">
+
+                        </tbody>
+                    </table>
+
+                    <div class="ui pagination menu">
+                        <a class="item">
+                            <div class="ui small red button" id="prev-pay-btn">
+                                <i class="left chevron icon"></i> PREVIOUS
+                            </div>
+                        </a>
+                        <a class="item">
+                            <div class="ui small red button" id="next-pay-btn">
+                                NEXT <i class="right chevron icon"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui inverted very padded clearing segment">
+        <div class="ui container">
+            <div class="ui stackable grid">
+                <div class="row">
+                    <div class="sixteen wide column">
+                        <div class="ui inverted header">Don't Miss Out! Get the Latest Insights Straight to Your Inbox!
+                        </div>
+                        <div class="ui fluid action input">
+                            <input type="text" name="newsletter" id="newsletter"
+                                placeholder="Subscribe for our newsletters !!">
+                            <button class="ui button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="four wide column">
+                        <ul class="ui inverted link list">
+                            <li>Benefits</li>
+                            <li>Births, death, marriages and care</li>
+                            <li>Business and self-employed</li>
+                            <li>Childcare and parenting</li>
+                            <li>Citizenship and living in Europe</li>
+                            <li>Crime, justice and the law</li>
+                        </ul>
+                    </div>
+                    <div class="four wide column">
+                        <ul class="ui inverted link list">
+                            <li>Disabled people</li>
+                            <li>Driving and transport</li>
+                            <li>Education and learning</li>
+                            <li>Employing people</li>
+                        </ul>
+                    </div>
+                    <div class="four wide column">
+                        <ul class="ui inverted link list">
+                            <li>Environment and countryside</li>
+                            <li>Housing and local services</li>
+                            <li>Money and tax</li>
+                            <li>Passports, travel and living abroad</li>
+                            <li>Visas and immigration</li>
+                            <li>Working, jobs and pensions</li>
+                        </ul>
+                    </div>
+                    <div class="four wide column">
+                        <ul class="ui inverted link list">
+                            <li>Departments</li>
+                            <li>News</li>
+                            <li>Guidance and regulation</li>
+                            <li>Research and statistics</li>
+                            <li>Policy papers and consultations</li>
+                            <li>Transparency</li>
+                            <li>How europe works</li>
+                            <li>Get involved</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six wide column">
+                        <img src="img/crown.svg" alt="" class="ui large image">
+                        <div class="ui small centered inverted header">Property of the Crown &reg;</div>
+                    </div>
+                    <div class="two wide column"></div>
+                    <div class="eight wide row">
+                        <div class="ui small inverted header">Please feel free to reach out to us.</div>
+                        <ul class="ui inverted large link list">
+                            <li><i class="envelope icon"></i> gbp@europetaxin.com</li>
+                            <li><i class="phone icon"></i> +(44) - 7588366782</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui modal" id="sign-out-modal">
+        <i class="close icon"></i>
+        <div class="description">
+            <div class="ui active dimmer">
+                <div class="ui huge red text loader"><span class="ui red text"><i class="pad lock icon"></i> Please wait
+                        while we securely sign you out</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+    <script>
+
+
+        let payments = [
+            {
+                "type": "creditagricole",
+                "beneficiary": "EDMOND SEHOUE",
+                "creditBankAccount": "AE750240068520232544901",
+                "address": "FLAT NO 1206 ANSAR ALNAHDA SHARJAH",
+                "country": "DUBAI",
+                "description": "business transaction",
+                "amount": "2000.00",
+                "currency": "EUR",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "13/09/2021 ",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "EDMOND SEHOUE",
+                "creditBankAccount": "AE750240068520232544901",
+                "address": "FLAT NO 1206 ANSAR ALNAHDA SHARJAH",
+                "country": "DUBAI",
+                "description": "business transaction",
+                "amount": "2000.00",
+                "currency": "EUR",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "14/09/2021",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "MACARTHY O DAVID",
+                "creditBankAccount": "9600001051143876",
+                "address": "19 W 24TH STREET NEW YORK NY 10010",
+                "country": "STATI UNITI",
+                "description": "business transaction",
+                "amount": "3,122.00",
+                "currency": "EUR",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "27/09/2021",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "KELLY ROBERTS",
+                "creditBankAccount": "10268820",
+                "address": "108 BURGUNDY ST HEIDELBERG VIC",
+                "country": "AUSTRALIA",
+                "description": "Family purpose",
+                "amount": "7,265.00",
+                "currency": "AUD",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "25/10/2021",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "SALVATORE MAGGIORE",
+                "creditBankAccount": "813349",
+                "address": "275 KENT STREET SYDNEY",
+                "country": "AUSTRALIA",
+                "description": "Family purpose",
+                "amount": "10,655.00",
+                "currency": "AUD",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "04/01/2022",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "KELLY ROBERTS",
+                "creditBankAccount": "10268820",
+                "address": "108 BURGUNDY ST HEIDELBERG VIC",
+                "country": "AUSTRALIA",
+                "description": "Family purpose",
+                "amount": "8,800.00",
+                "currency": "AUD",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "23/11/2021",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "SALVATORE MAGGIORE",
+                "creditBankAccount": "46244357",
+                "address": "SUSSEX STREET, 201, TOWER 1",
+                "country": "AUSTRALIA",
+                "description": "family Business platform",
+                "amount": "18,515.00",
+                "currency": "AUD",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "25/01/2022",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "SALVATORE MAGGIORE",
+                "creditBankAccount": "46244357",
+                "address": "SUSSEX STREET, 201, TOWER 1",
+                "country": "AUSTRALIA",
+                "description": "Business platform",
+                "amount": "43,350.00",
+                "currency": "AUD",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "19/02/2022",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "SALVATORE MAGGIORE",
+                "creditBankAccount": "46244357",
+                "address": "SUSSEX STREET, 201, TOWER 1",
+                "country": "AUSTRALIA",
+                "description": "Business platform",
+                "amount": "20,395.00",
+                "currency": "AUD",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "10/03/2022",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "SALVATORE MAGGIORE",
+                "creditBankAccount": "46244357",
+                "address": "SUSSEX STREET, 201, TOWER 1",
+                "country": "AUSTRALIA",
+                "description": "Business platform",
+                "amount": "30,005.00",
+                "currency": "AUD",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "21/05/2022 ",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "TONY SMILEVSKI",
+                "creditBankAccount": "028524340",
+                "address": "TORRENSVILLE 143 HENLEY BEACH RD",
+                "country": "AUSTRALIA",
+                "description": "Business platform",
+                "amount": "22,431.00",
+                "currency": "AUD",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "05/07/2022",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "TONY SMILEVSKI",
+                "creditBankAccount": "16055969",
+                "address": "TORRENSVILLE 143 HENLEY BEACH RD",
+                "country": "AUSTRALIA",
+                "description": "Business platform",
+                "amount": "26,300.00",
+                "currency": "AUD",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "02/11/2022",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "TONY SMILEVSKI",
+                "creditBankAccount": "IT46W0623074370000040073273",
+                "address": "OP.ESTERO 12/12/2022 NUM.17743 DISPOSIZIONE DI BONIFICO RIF.",
+                "country": "AUSTRALIA",
+                "description": "Business platform",
+                "amount": "13.998,57",
+                "currency": "EUR",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "14/12/2022",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "TONY SMILEVSKI",
+                "creditBankAccount": "IT46W0623074370000040073273",
+                "address": "OP.ESTERO 12/12/2022 NUM.17743 DISPOSIZIONE DI BONIFICO RIF.",
+                "country": "AUSTRALIA",
+                "description": "Business platform",
+                "amount": "5.684,00",
+                "currency": "EUR",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "18/12/2023",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "creditagricole",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "OP.ESTERO 12/12/2022 NUM.17743 DISPOSIZIONE DI BONIFICO RIF.",
+                "country": "AUSTRALIA",
+                "description": "Business platform",
+                "amount": "5.684,00",
+                "currency": "EUR",
+                "debitBankAccount": "000040073273",
+                "dateOfEntry": "18/12/2023",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "4.011,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "10/10/2024",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "8.295,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "26/10/2023 ",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "2.980,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "23/11/2023",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "5.763,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "04/12/2023",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "2.860,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "04/12/2023",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "3.440,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "23/01/2024",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "2.600,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "28/02/2024",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "9.550,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "12/03/2024",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "6.220,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "09/04/2024",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "4.465,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "06/05/2024 ",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "5.772,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "13/06/2024",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "2.000,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "19/08/2024",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "EWA POLANSKA",
+                "creditBankAccount": "PL73249000050000400067275017",
+                "address": "ALIOR BANK SPOLKA AKCYJNA",
+                "country": "POLAND",
+                "description": "Business platform",
+                "amount": "1.300,00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "15/10/2024",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "ingdirectbank",
+                "beneficiary": "Em Van Raaij",
+                "creditBankAccount": "NL78SNSB8846296613",
+                "address": "-",
+                "country": "-",
+                "description": "Business platform",
+                "amount": "3,810.00",
+                "currency": "EUR",
+                "debitBankAccount": "IT54Z0347501605CC0010148011 ",
+                "dateOfEntry": "-",
+                "channel": "Home Banking",
+                "status": "PAID"
+            },
+            {
+                "type": "westernunion",
+                "beneficiary": "Mustapha Quadri Olabanji",
+                "creditBankAccount": "-",
+                "address": "-",
+                "country": "-",
+                "description": "-",
+                "amount": "320.00",
+                "currency": "EUR",
+                "debitBankAccount": "-",
+                "dateOfEntry": "07/07/2021",
+                "channel": "Western Union",
+                "status": "PAID"
+            },
+            {
+                "type": "westernunion",
+                "beneficiary": "Mustapha Quadri Olabanji",
+                "creditBankAccount": "-",
+                "address": "-",
+                "country": "-",
+                "description": "-",
+                "amount": "510.00",
+                "currency": "EUR",
+                "debitBankAccount": "-",
+                "dateOfEntry": "-",
+                "channel": "Western Union",
+                "status": "PAID"
+            },
+            {
+                "type": "westernunion",
+                "beneficiary": "Mustapha Faruq Afolabi",
+                "creditBankAccount": "-",
+                "address": "-",
+                "country": "-",
+                "description": "-",
+                "amount": "350.00",
+                "currency": "EUR",
+                "debitBankAccount": "-",
+                "dateOfEntry": "-",
+                "channel": "Western Union",
+                "status": "PAID"
+            },
+            {
+                "type": "westernunion",
+                "beneficiary": "Mustapha Faruq Afolabi",
+                "creditBankAccount": "-",
+                "address": "-",
+                "country": "-",
+                "description": "-",
+                "amount": "250.00",
+                "currency": "EUR",
+                "debitBankAccount": "-",
+                "dateOfEntry": "-",
+                "channel": "Western Union",
+                "status": "PAID"
+            },
+            {
+                "type": "westernunion",
+                "beneficiary": "Mustapha Faruq Afolabi",
+                "creditBankAccount": "-",
+                "address": "-",
+                "country": "-",
+                "description": "-",
+                "amount": "500.00",
+                "currency": "EUR",
+                "debitBankAccount": "-",
+                "dateOfEntry": "02.08.2021",
+                "channel": "Western Union",
+                "status": "PAID"
+            },
+            {
+                "type": "westernunion",
+                "beneficiary": "Credit Issued",
+                "creditBankAccount": "-",
+                "address": "-",
+                "country": "-",
+                "description": "-",
+                "amount": "250.00",
+                "currency": "EUR",
+                "debitBankAccount": "-",
+                "dateOfEntry": "08.08.2021",
+                "channel": "Western Union",
+                "status": "PAID"
+            },
+            {
+                "type": "westernunion",
+                "beneficiary": "Mustapha Faruq Afolabi",
+                "creditBankAccount": "-",
+                "address": "-",
+                "country": "-",
+                "description": "-",
+                "amount": "250.00",
+                "currency": "EUR",
+                "debitBankAccount": "-",
+                "dateOfEntry": "09.08.2021",
+                "channel": "Western Union",
+                "status": "PAID"
+            },
+            {
+                "type": "westernunion",
+                "beneficiary": "Mustapha Faruq Afolabi",
+                "creditBankAccount": "-",
+                "address": "-",
+                "country": "-",
+                "description": "-",
+                "amount": "270.00",
+                "currency": "EUR",
+                "debitBankAccount": "-",
+                "dateOfEntry": "15.08.2021",
+                "channel": "Western Union",
+                "status": "PAID"
+            },
+            {
+                "type": "westernunion",
+                "beneficiary": "Mustapha Faruq Afolabi",
+                "creditBankAccount": "-",
+                "address": "-",
+                "country": "-",
+                "description": "-",
+                "amount": "510.00",
+                "currency": "EUR",
+                "debitBankAccount": "-",
+                "dateOfEntry": "18.08.2021",
+                "channel": "Western Union",
+                "status": "PAID"
+            },
+            {
+                "type": "westernunion",
+                "beneficiary": "Credit Issued",
+                "creditBankAccount": "-",
+                "address": "-",
+                "country": "-",
+                "description": "-",
+                "amount": "1020.00",
+                "currency": "EUR",
+                "debitBankAccount": "-",
+                "dateOfEntry": "25.08.2021",
+                "channel": "Western Union",
+                "status": "PAID"
+            },
+            {
+                "type": "moneygram",
+                "beneficiary": "Mustapha Faruq Afolabi",
+                "creditBankAccount": "-",
+                "address": "-",
+                "country": "-",
+                "description": "-",
+                "amount": "991.10",
+                "currency": "EUR",
+                "debitBankAccount": "-",
+                "dateOfEntry": "19.08.2021",
+                "channel": "MoneyGram",
+                "status": "PAID"
+            }
+        ];
+
+        let paymentTableBody = document.getElementById('payment-table-body');
+        let index = 0;
+        let final = 10;
+        let currentPayments = [...payments]; // Track the current subset
+
+        const displayPayments = (paymentList) => {
+            paymentTableBody.innerHTML = "";
+
+            if (!Array.isArray(paymentList)) {
+                console.error("The payments variable is not an array.");
+                return;
+            }
+
+            const paymentsCopy = [...paymentList];
+            let displayedPayments = "";
+
+            if (index < paymentsCopy.length) {
+                const slicedPayments = paymentsCopy.slice(index, final);
+                displayedPayments = slicedPayments.map(payment =>
+                    `
+        <tr>
+            <td>${payment.type}</td>
+            <td>${payment.beneficiary}</td>
+            <td>${payment.creditBankAccount}</td>
+            <td>${payment.address}</td>
+            <td>${payment.country}</td>
+            <td>${payment.description}</td>
+            <td>${payment.amount}</td>
+            <td>${payment.currency}</td>
+            <td>${payment.debitBankAccount}</td>
+            <td>${payment.dateOfEntry}</td>
+            <td>${payment.channel}</td>
+            <td class="green colored">${payment.status}</td>
+            <td><span><i class="big red file pdf icon payment-receipt" style="cursor: pointer;"></i></span></td>
+        </tr> `).join('');
+
+                paymentTableBody.innerHTML = displayedPayments;
+                attachToastEventListeners();
+            } else {
+                console.log("No more payments to display.");
+            }
+        };
+
+        const showNextPayments = () => {
+            if (index + 10 < currentPayments.length) {
+                index += 10;
+                final += 10;
+                displayPayments(currentPayments);
+            }
+        };
+
+        const showPrevPayments = () => {
+            if (index - 10 >= 0) {
+                index -= 10;
+                final -= 10;
+                displayPayments(currentPayments);
+            }
+        };
+
+        const updateDisplayedPayments = (newPayments) => {
+            currentPayments = newPayments; // Set the filtered subset
+            index = 0;
+            final = 10;
+            displayPayments(currentPayments);
+        };
+
+        // Filter functions
+        const showCreditAgricolePayments = () => updateDisplayedPayments(payments.filter(payment => payment.type === "creditagricole"));
+        const showWuPayments = () => updateDisplayedPayments(payments.filter(payment => payment.type === "westernunion"));
+        const showMgPayments = () => updateDisplayedPayments(payments.filter(payment => payment.type === "moneygram"));
+        const showIngDirectBankPayments = () => updateDisplayedPayments(payments.filter(payment => payment.type === "ingdirectbank"));
+        const showAllPayments = () => updateDisplayedPayments(payments);
+
+        // Event listeners
+        document.getElementById('prev-pay-btn').addEventListener('click', showPrevPayments);
+        document.getElementById('next-pay-btn').addEventListener('click', showNextPayments);
+
+        document.getElementById('credit-agricole-tag').addEventListener('click', showCreditAgricolePayments);
+        document.getElementById('moneygram-tag').addEventListener('click', showMgPayments);
+        document.getElementById('western-union-tag').addEventListener('click', showWuPayments);
+        document.getElementById('ing-direct-bank-tag').addEventListener('click', showIngDirectBankPayments);
+        document.getElementById('show-all-payments-tag').addEventListener('click', showAllPayments);
+
+        // Initial display
+        window.addEventListener('load', () => displayPayments(payments));
+
+        const signOutBtn = document.getElementById('sign-out-btn');
+
+        signOutBtn.addEventListener('click', () => {
+            setTimeout(() => {
+                location.href = 'index.html';
+            }, 10000);
+
+            $('#sign-out-modal').modal('show');
+        });
+
+        const attachToastEventListeners = () => {
+            // Reattach event listeners for the payment receipt icons
+            const payReceipts = document.querySelectorAll('.payment-receipt');
+            payReceipts.forEach(payReceipt => {
+                payReceipt.addEventListener('click', () => {
+                    $.toast({
+                        class: 'error',
+                        message: 'Access Restricted. Please resolve all pending payments.',
+                        showIcon: 'exclamation circle'
+                    });
+                });
+            });
+        };
+
+        document.querySelectorAll('.trx_btns').forEach(btn => {
+            btn.addEventListener('click', () => {
+                $.toast({
+                    class: 'error',
+                    message: 'Access Restricted. Please resolve all pending payments.',
+                    showIcon: 'exclamation circle'
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
